@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "kubernates-d796"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "kubernates-d796"
+  template:
+    metadata:
+      labels:
+        app: "kubernates-d796"
+    spec:
+      containers:
+        - name: "kubernates-d796"
+          image: "dsileecher.azurecr.io/kubernates"
+          ports:
+          - containerPort: 80
