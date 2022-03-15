@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "kubernates-d164"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "kubernates-d164"
+  template:
+    metadata:
+      labels:
+        app: "kubernates-d164"
+    spec:
+      containers:
+        - name: "kubernates-d164"
+          image: "fshghs.azurecr.io/kubernates"
+          ports:
+          - containerPort: 80
