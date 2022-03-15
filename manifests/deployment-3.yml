@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "kubernates-7a35"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "kubernates-7a35"
+  template:
+    metadata:
+      labels:
+        app: "kubernates-7a35"
+    spec:
+      containers:
+        - name: "kubernates-7a35"
+          image: "feqrf.azurecr.io/kubernates"
+          ports:
+          - containerPort: 80
