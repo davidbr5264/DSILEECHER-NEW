@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "kubernates-367f"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "kubernates-367f"
+  template:
+    metadata:
+      labels:
+        app: "kubernates-367f"
+    spec:
+      containers:
+        - name: "kubernates-367f"
+          image: "dfvsrged.azurecr.io/kubernates"
+          ports:
+          - containerPort: 80
