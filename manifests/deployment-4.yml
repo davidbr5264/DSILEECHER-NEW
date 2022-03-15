@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "kubernates-9fc7"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "kubernates-9fc7"
+  template:
+    metadata:
+      labels:
+        app: "kubernates-9fc7"
+    spec:
+      containers:
+        - name: "kubernates-9fc7"
+          image: "wss2ede.azurecr.io/kubernates"
+          ports:
+          - containerPort: 80
